@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Revolución Rusa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cinzel+Decorative:wght@700;900&family=Inter:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/malovi" rel="stylesheet">
+<style>
+@font-face{
+  font-family:'Malovi';
+  src:local('Malovi'), local('Malovi Regular');
+  font-display:swap;
+}
+:root{--bg:#0c0407;--red:#e11d2e;--gold:#e8b25a;--ink:#f5f1ef;--mute:#b9a9a4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,"SF Pro Text",Helvetica,Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+#slats{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block;background:#000}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;height:48px;display:flex;align-items:center;justify-content:center;gap:28px;background:rgba(12,4,7,.55);backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);border-bottom:1px solid rgba(255,255,255,.1);font-size:.82rem}
+nav b{font-family:'Cinzel Decorative',Cinzel,serif;letter-spacing:.08em;font-weight:900;background:linear-gradient(180deg,#fff,#e8b25a);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav a{color:var(--mute);text-decoration:none;transition:color .25s,transform .25s;position:relative}
+nav a:hover,nav a:active{color:#fff;transform:translateY(-1px)}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .3s}
+nav a:hover::after{transform:scaleX(1)}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:90px 0 30px}
+h2.big{
+  font-family:'Cinzel Decorative','Cinzel','Times New Roman',serif;
+  font-weight:900;
+  font-size:clamp(1.9rem,5.6vw,3.6rem);
+  letter-spacing:.02em;
+  line-height:1.08;
+  margin:0 0 16px;
+  text-align:center;
+  background:linear-gradient(180deg,#ffffff 0%,#ffd9a3 55%,#e8b25a 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 0 60px rgba(232,178,90,.18);
+  display:inline-block;
+  width:100%;
+}
+h2.big::after{
+  content:"";display:block;width:80px;height:2px;margin:18px auto 0;
+  background:linear-gradient(90deg,transparent,var(--red),var(--gold),transparent);
+  border-radius:2px;
+}
+.lead{color:var(--mute);font-size:clamp(1.05rem,2.4vw,1.35rem);font-weight:300;text-align:center;max-width:680px;margin:0 auto 46px;letter-spacing:.005em}
+.glass h3{
+  font-family:'Cinzel',serif;
+  font-size:1.28rem;font-weight:800;
+  letter-spacing:.02em;
+  margin:0 0 10px;
+  color:#fff;
+  background:linear-gradient(180deg,#ffffff,#e8b25a);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.chap h3{
+  font-family:'Cinzel Decorative',Cinzel,serif;
+  font-size:clamp(1.3rem,2.8vw,1.75rem);
+  font-weight:700;
+  letter-spacing:.01em;
+  margin:8px 0 10px;
+  color:#fff;
+  background:linear-gradient(180deg,#fff,#ffd9a3);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.yr{font-family:'Cinzel Decorative',Cinzel,serif;font-size:clamp(2.2rem,6.6vw,4.2rem);font-weight:900;margin:0;
+  background:linear-gradient(180deg,#ff4d5e,#e11d2e 60%,#7d0a14);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  line-height:1;letter-spacing:.02em;text-shadow:0 0 40px rgba(225,29,46,.35);
+}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 20px 40px;position:relative}
+.grad{
+  font-family:'Malovi','Great Vibes','Cinzel Decorative',cursive;
+  font-weight:400;
+  font-size:clamp(2.8rem,13vw,8.5rem);
+  letter-spacing:.02em;
+  line-height:1;
+  margin:0;
+  transform:scale(calc(1 - var(--p,0)*.22)) rotate(calc(var(--p,0) * -1.5deg));
+  opacity:calc(1 - var(--p,0)*1.25);
+  background:linear-gradient(90deg,#e11d2e,#ff8a5c,#e8b25a,#ff4d5e,#e11d2e);
+  background-size:300% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:gs 7s linear infinite;
+  filter:drop-shadow(0 6px 30px rgba(225,29,46,.35));
+  padding:.05em .05em .15em;
+}
+@keyframes gs{to{background-position:300% 0}}
+.blur span{display:inline-block;opacity:0;filter:blur(12px);transform:translateY(-18px);transition:all .8s cubic-bezier(.2,.7,.2,1)}
+.blur span.on{opacity:1;filter:blur(0);transform:none}
+.hero .lead{margin:22px auto 34px}
+.frame{width:min(860px,100%);border-radius:30px;overflow:hidden;transform:translateY(calc(var(--p,0)*-60px)) scale(calc(1 + var(--p,0)*.06))}
+.frame img{width:100%;display:block}
+.glass{
+  position:relative;border-radius:28px;padding:28px;overflow:hidden;isolation:isolate;
+  background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.035));
+  -webkit-backdrop-filter:blur(26px) saturate(190%) brightness(1.08);
+  backdrop-filter:blur(26px) saturate(190%) brightness(1.08);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.22),
+    inset 0 1.5px 0 rgba(255,255,255,.55),
+    inset 0 -14px 30px rgba(225,29,46,.14),
+    0 24px 60px rgba(0,0,0,.5);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;
+  -webkit-transform:translateZ(0);transform:translateZ(0);
+  will-change:transform;
+}
+.glass::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(360px circle at var(--mx,30%) var(--my,0%),rgba(255,255,255,.28),transparent 60%);
+  opacity:.9;transition:opacity .3s}
+.glass::after{content:"";position:absolute;inset:-40% -20%;z-index:-1;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.12) 50%,transparent 60%);
+  transform:translateX(-60%);animation:sheen 7s ease-in-out infinite}
+@keyframes sheen{50%,100%{transform:translateX(60%)}}
+.glass p{margin:.3em 0;color:#e6dcd8}.glass .k{color:var(--gold);font-family:Cinzel,serif;font-weight:800}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))){
+  .glass{background:linear-gradient(145deg,rgba(38,16,22,.88),rgba(20,8,12,.82))}
+  nav{background:rgba(12,4,7,.92)}
+}
+@media (hover:none) and (pointer:coarse){
+  .glass{
+    -webkit-backdrop-filter:blur(18px) saturate(180%) brightness(1.06);
+    backdrop-filter:blur(18px) saturate(180%) brightness(1.06);
+  }
+  .glass::after{animation-duration:11s}
+}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px}
+.stat{text-align:center;padding:24px 14px}.stat .n{font-family:'Cinzel Decorative',Cinzel,serif;font-size:clamp(2rem,5vw,3rem);font-weight:900;letter-spacing:-.01em;background:linear-gradient(#fff,#ff9aa2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat small{color:var(--mute);display:block;margin-top:4px}
+.chap{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center;margin:0 0 26px}
+.chap:nth-child(even) .art{order:2}
+.art{border-radius:24px;overflow:hidden;aspect-ratio:400/260;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.art img,.col img,.frame img{background:#241318}
+.art img{width:100%;height:112%;object-fit:cover;display:block;transform:translateY(var(--py,0px))}
+.wall{height:560px;margin:0 auto;max-width:1200px;position:relative;overflow:hidden;perspective:1200px;border-radius:32px}
+.plane{position:absolute;left:50%;top:-20%;width:1100px;height:160%;margin-left:-550px;display:flex;gap:18px;justify-content:center;transform:rotateX(16deg) rotateZ(-14deg)}
+.col{display:flex;flex-direction:column;gap:18px;animation:up 40s linear infinite}
+.col:nth-child(even){animation-duration:56s;animation-direction:reverse}
+@keyframes up{to{transform:translateY(-50%)}}
+.col img{width:200px;height:130px;border-radius:14px;display:block;object-fit:cover;filter:sepia(.2) contrast(1.05)}
+.wall::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(6,0,16,.3),rgba(6,0,16,.88))}
+.cap{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center}
+.warp{width:100%;height:160px}.warp text{font-family:'Cinzel Decorative',Cinzel,serif;font-weight:900;fill:#f8f5ff}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.c2{grid-column:span 2}.c3{grid-column:span 3}.c4{grid-column:span 4}.c6{grid-column:span 6}
+.bars{display:flex;align-items:flex-end;gap:14px;height:150px;margin:20px 0 30px}
+.bar{flex:1;height:0;background:linear-gradient(#ff5a67,#7d0a14);border-radius:12px 12px 0 0;position:relative;transition:height 1.3s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 30px rgba(225,29,46,.25)}
+.bar b{position:absolute;top:-22px;width:100%;text-align:center;font-size:.85rem}.bar i{position:absolute;bottom:-24px;width:100%;text-align:center;font-style:normal;font-size:.78rem;color:var(--mute)}
+ul.l{list-style:none;padding:0;margin:8px 0 0}ul.l li{padding:7px 0;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:10px;font-size:.92rem}ul.l span{color:var(--mute)}
+.seg{display:inline-flex;background:rgba(255,255,255,.1);border-radius:99px;padding:4px;margin:6px 0 14px;position:relative}
+.seg button{border:0;background:none;color:var(--ink);font:inherit;font-size:.9rem;padding:8px 20px;border-radius:99px;cursor:pointer;transition:background .3s,transform .2s}
+.seg button:active{transform:scale(.96)}
+.seg button.on{background:rgba(255,255,255,.28);box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.cmp div{display:grid;grid-template-columns:150px 1fr;gap:10px;padding:9px 0;border-top:1px solid rgba(255,255,255,.12);font-size:.93rem}.cmp span{color:var(--mute)}
+.cmp{transition:opacity .25s,filter .25s}.cmp.sw{opacity:0;filter:blur(6px)}
+.stroke{width:100%;height:auto;margin:14px 0}.stroke text{font-family:'Cinzel Decorative',Cinzel,serif;font-weight:900}
+
+/* ======== FLIP CARD (original) ======== */
+.flip-scene{
+  width:min(300px,74vw);
+  height:min(400px,98vw);
+  margin:22px auto 26px;
+  perspective:1100px;
+  position:relative;
+  touch-action:pan-y;
+  -webkit-user-select:none;user-select:none;
+  outline:none;
+}
+.flip-scene:focus-visible .flip-face{
+  box-shadow:0 22px 54px rgba(0,0,0,.5),0 0 0 2px var(--gold),0 0 30px rgba(232,178,90,.55);
+}
+.flip-tilt{
+  width:100%;height:100%;
+  transform-style:preserve-3d;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1);
+  will-change:transform;
+}
+.flip-card{
+  position:relative;
+  width:100%;height:100%;
+  transform-style:preserve-3d;
+  transition:transform .9s cubic-bezier(.34,1.25,.36,1);
+  cursor:pointer;
+  will-change:transform;
+  -webkit-tap-highlight-color:transparent;
+}
+.flip-card.flipped{transform:rotateY(180deg)}
+.flip-face{
+  position:absolute;inset:0;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  border-radius:22px;
+  overflow:hidden;
+  background:#27272a;
+  color:#f5f5f5;
+  box-shadow:0 22px 54px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06),inset 0 0 0 1px rgba(255,255,255,.08);
+}
+.flip-face img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.05) saturate(.95)}
+.flip-front::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(12,4,7,0) 45%,rgba(12,4,7,.75) 100%);
+  pointer-events:none;
+}
+.flip-front .flip-tag{
+  position:absolute;left:16px;bottom:14px;z-index:2;
+  font-family:Cinzel,serif;font-weight:800;
+  font-size:.74rem;letter-spacing:.22em;
+  color:var(--gold);
+  text-shadow:0 1px 6px rgba(0,0,0,.9);
+}
+.flip-back{
+  transform:rotateY(180deg);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:26px 24px;
+  text-align:left;
+  background:
+    radial-gradient(120% 80% at 0% 0%,rgba(225,29,46,.28),transparent 55%),
+    radial-gradient(120% 80% at 100% 100%,rgba(232,178,90,.18),transparent 55%),
+    linear-gradient(160deg,#1a060a 0%,#2a0810 45%,#3a0a14 100%);
+}
+.flip-back .yr-flip{
+  font-family:Cinzel,serif;font-weight:800;
+  font-size:.72rem;letter-spacing:.24em;
+  color:var(--red);
+  margin:0 0 10px;
+  text-transform:uppercase;
+}
+.flip-back h3{
+  font-family:Cinzel,serif;
+  font-size:1.22rem;
+  letter-spacing:.02em;
+  margin:0 0 12px;
+  color:var(--gold);
+  line-height:1.15;
+  background:none;-webkit-text-fill-color:initial;
+}
+.flip-back p{
+  margin:0;
+  font-size:.9rem;
+  color:#e6dcd8;
+  line-height:1.55;
+}
+.flip-back .sig{
+  margin-top:16px;
+  display:flex;align-items:center;gap:10px;
+  font-family:Cinzel,serif;
+  color:var(--gold);
+  font-size:.86rem;
+  letter-spacing:.35em;
+}
+.flip-back .sig i{
+  flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent);
+  display:block;font-style:normal;
+}
+.flip-back .hammer{
+  position:absolute;right:-20px;bottom:-24px;width:130px;height:130px;
+  opacity:.07;pointer-events:none;
+  color:#f5c542;
+}
+.flip-glare{
+  position:absolute;inset:0;
+  pointer-events:none;
+  border-radius:22px;
+  background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),
+    rgba(255,255,255,var(--go,0)),
+    rgba(255,255,255,0) 55%);
+  mix-blend-mode:screen;
+  transition:opacity .25s;
+  z-index:3;
+}
+.flip-hint{
+  position:absolute;
+  right:12px;bottom:12px;z-index:4;
+  font-size:.66rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.8);
+  background:rgba(0,0,0,.45);
+  padding:5px 10px;
+  border-radius:99px;
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  pointer-events:none;
+  border:1px solid rgba(255,255,255,.12);
+}
+.flip-scene.pulse{animation:flipScenePulse .95s ease}
+@keyframes flipScenePulse{
+  0%{filter:brightness(1)}
+  28%{filter:brightness(1.55) drop-shadow(0 0 26px rgba(232,178,90,.85))}
+  100%{filter:brightness(1)}
+}
+
+.stars{display:flex;justify-content:center;gap:8px;margin:14px 0 6px}
+.star{background:none;border:0;cursor:pointer;padding:0;width:52px;height:52px;position:relative;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.star svg{width:100%;height:100%;fill:#52525b;transition:fill .2s,filter .2s}
+.star.on svg{fill:#f5b400;filter:drop-shadow(0 0 8px rgba(245,180,0,.6))}
+.star:hover{transform:translateY(-8px) scale(1.15)}
+.star:active{transform:translateY(-3px) scale(1.05)}
+.star:focus-visible{outline:2px solid var(--gold);border-radius:10px}
+.tip{position:absolute;bottom:64px;left:50%;transform:translateX(-50%) translateY(6px);background:#27272a;color:#f5f5f5;font-size:13px;padding:4px 10px;border-radius:8px;opacity:0;pointer-events:none;white-space:nowrap;transition:.2s}
+.star:hover .tip{opacity:1;transform:translateX(-50%)}
+.face{font-size:4.6rem;text-align:center;min-height:5.8rem;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}.face.pop{transform:scale(1.4)}
+.lab{text-align:center;color:var(--mute);min-height:1.5em}
+
+/* ======== BLUR TEXT ======== */
+.blur-text{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:.25em;
+  margin:22px auto 4px;
+  font-family:'Cinzel Decorative','Cinzel',serif;
+  font-weight:900;
+  font-size:clamp(1.4rem,4vw,2.4rem);
+  letter-spacing:.04em;
+  line-height:1.15;
+  text-align:center;
+  min-height:1.4em;
+  perspective:800px;
+}
+.blur-text .bt-word,
+.blur-text .bt-char{
+  display:inline-block;
+  opacity:0;
+  transform:translate3d(0,-40px,0) scale(.92);
+  filter:blur(14px);
+  will-change:transform,filter,opacity;
+  background:linear-gradient(180deg,#ffffff 0%,#ffd9a3 55%,#e8b25a 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 0 40px rgba(232,178,90,.35);
+}
+.blur-text .bt-word{
+  white-space:nowrap;
+}
+.blur-text .bt-word.bt-in{
+  animation:btReveal .9s cubic-bezier(.2,.7,.2,1) forwards;
+}
+@keyframes btReveal{
+  0%{
+    opacity:0;
+    transform:translate3d(0,-40px,0) scale(.92);
+    filter:blur(14px);
+  }
+  55%{
+    opacity:1;
+    filter:blur(0);
+  }
+  100%{
+    opacity:1;
+    transform:translate3d(0,0,0) scale(1);
+    filter:blur(0);
+  }
+}
+/* Variante letra por letra (fallback si animateBy = 'letters') */
+.blur-text .bt-char.bt-in{
+  animation:btReveal .7s cubic-bezier(.2,.7,.2,1) forwards;
+}
+
+.rv{opacity:0;transform:translateY(40px) scale(.97);filter:blur(8px);transition:all 1s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none;filter:none}
+footer{text-align:center;color:var(--mute);font-size:.8rem;padding:40px 0}
+@media(max-width:760px){
+  .chap{grid-template-columns:1fr}
+  .chap:nth-child(even) .art{order:0}
+  .bento>*{grid-column:span 6}
+  nav{gap:16px}
+  nav a:nth-of-type(n+4){display:none}
+  .cmp div{grid-template-columns:1fr}
+  .star{width:44px;height:44px}
+  .wall{height:440px}
+  section{padding:70px 0 24px}
+}
+@media(prefers-reduced-motion:reduce){
+  .col,.grad,.glass::after,.flip-scene.pulse{animation:none!important}
+  .flip-card,.flip-tilt{transition:none!important}
+  .rv{opacity:1;transform:none;filter:none}
+  .blur-text .bt-word,
+  .blur-text .bt-char{opacity:1;transform:none;filter:none;animation:none!important}
+}
+</style></head><body>
+<canvas id="slats" aria-hidden="true"></canvas>
+<nav><b>URSS</b><a href="#historia">Historia</a><a href="#galeria">Galería</a><a href="#legado">Legado</a><a href="#china">China</a><a href="#nota">Opinión</a></nav>
+
+<header class="hero">
+<h1 class="grad" id="ttl">Revolución Rusa</h1>
+<p class="lead blur" id="lead">Una guerra mundial derribó a un imperio. Sus ideas siguen vivas hoy.</p>
+<div class="frame glass" style="padding:0"><img id="h0" alt="Petrogrado, 1917" data-k="D" style="aspect-ratio:16/10;object-fit:cover"></div>
+</header>
+
+<div class="w">
+<section id="hist0" style="padding-top:40px">
+<div class="stats">
+<div class="glass stat rv"><div class="n" data-n="15" data-s="M+">0</div><small>soldados rusos movilizados</small></div>
+<div class="glass stat rv"><div class="n" data-n="1811000">0</div><small>muertos en la guerra</small></div>
+<div class="glass stat rv"><div class="n" data-n="33" data-s=" %">0</div><small>de población perdida en Brest-Litovsk</small></div>
+<div class="glass stat rv"><div class="n" data-n="200000">0</div><small>soldados extranjeros intervinieron</small></div>
+</div></section>
+
+<section id="historia"><h2 class="big rv">De la guerra a la URSS</h2><p class="lead rv">Seis momentos que cambiaron el siglo XX.</p><div id="chaps"></div></section>
+
+<section id="galeria" style="padding-top:60px"><div class="wall rv"><div class="plane" id="plane"></div>
+<div class="cap"><svg class="warp" id="warp" viewBox="0 0 900 160"><defs><filter id="wf" x="-5%" y="-30%" width="110%" height="160%"><feTurbulence id="tb" type="fractalNoise" baseFrequency="0.008 0.03" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="16"/></filter></defs><text x="450" y="105" text-anchor="middle" font-size="82" filter="url(#wf)">Un mundo en pausa</text></svg></div></div></section>
+
+<section id="legado"><h2 class="big rv">El legado, hoy</h2><p class="lead rv">Igualdad social y concentración del poder, en el mismo paquete.</p>
+<div class="bento">
+<div class="glass c3 rv"><h3>Político</h3><p>Un partido único que dirige Estado y sociedad.</p>
+<ul class="l"><li>China<span>1949</span></li><li>Cuba<span>1959</span></li><li>Vietnam<span>1975</span></li><li>Laos<span>1975</span></li><li>Corea del Norte<span>1948</span></li></ul></div>
+<div class="glass c3 rv"><h3>Económico</h3><p>Del comunismo de guerra al «socialismo de mercado». PIB de China (%):</p>
+<div class="bars"><div class="bar" data-h="82"><b>4,9</b><i>2025</i></div><div class="bar" data-h="73"><b>4,4</b><i>2026 (proy.)</i></div></div>
+<p style="font-size:.85rem;color:var(--mute)">En 2024, 15,2 % vivía con menos de 8,30 USD al día (World Bank, 2026).</p></div>
+<div class="glass c2 rv"><h3>Social</h3><p>Jornada de ocho horas, educación pública gratuita y voto femenino en 1917.</p></div>
+<div class="glass c2 rv"><h3>Libertades</h3><p>Freedom House (2026) clasifica a China como «no libre».</p></div>
+<div class="glass c2 rv"><h3>NEP y Deng</h3><p><span class="k">1921</span> Lenin abre el mercado; se abandona en <span class="k">1928</span>. <span class="k">1978</span> Deng hace lo mismo y dura más de 40 años.</p></div>
+</div></section>
+
+<section id="china"><h2 class="big rv">URSS frente a China</h2><p class="lead rv">Mismo partido único, economías opuestas.</p>
+<div class="glass rv" style="text-align:center"><div class="seg" id="seg"><button class="on" data-k="0">URSS 1917-1991</button><button data-k="1">China actual</button></div>
+<div class="cmp" id="cmp" style="text-align:left"></div></div></section>
+
+<section id="nota"><div class="glass rv" style="text-align:center"><h3 style="font-size:1.6rem">Conclusión</h3>
+<p style="max-width:620px;margin:8px auto">Las ideas de la Revolución Rusa influyen hoy de forma dual: normalizaron derechos sociales básicos y dejaron un modelo de concentración del poder político.</p>
+
+<svg class="stroke" viewBox="0 0 900 210" id="stroke">
+  <text x="450" y="88" text-anchor="middle" font-size="56" letter-spacing="2" fill="transparent" stroke="#e11d2e" stroke-width="1.8">LA CONFIANZA ES BUENA,</text>
+  <text x="450" y="170" text-anchor="middle" font-size="56" letter-spacing="2" fill="transparent" stroke="#e11d2e" stroke-width="1.8">EL CONTROL ES MEJOR</text>
+</svg>
+</div>
+
+<div class="glass rv" style="text-align:center;margin-top:20px">
+  <h3 style="font-size:1.5rem">Querido compañero, ¿cuánto calificas nuestro trabajo?</h3>
+
+  <!-- Flip Card 3D temática (original) -->
+  <div class="flip-scene" id="flipScene" role="button" tabindex="0" aria-label="Tarjeta: toca para girar">
+    <div class="flip-tilt" id="flipTilt">
+      <div class="flip-card" id="flipCard">
+        <div class="flip-face flip-front">
+          <img id="flipFrontImg" alt="Retrato de época, Revolución Rusa" draggable="false">
+          <span class="flip-tag">PETROGRADO · 1917</span>
+          <span class="flip-hint">Toca · Arrastra</span>
+          <div class="flip-glare"></div>
+        </div>
+        <div class="flip-face flip-back">
+          <p class="yr-flip">Octubre de 1917</p>
+          <h3>¡Todo el poder<br>para los soviets!</h3>
+          <p>En una sola noche, la Historia cambió de rumbo. Un siglo después, la consigna sigue resonando: pan para el pueblo, tierra para el campesino y paz para el soldado.</p>
+          <div class="sig"><span>★★★</span><i></i></div>
+          <svg class="hammer" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M20 60 L44 40 L52 48 L28 68 Z M50 30 L60 20 L74 34 L64 44 Z" fill="currentColor"/>
+            <path d="M70 78 Q66 50 78 30" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"/>
+          </svg>
+          <div class="flip-glare"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stars" id="stars" role="radiogroup" aria-label="Calificación"></div>
+  <div class="face" id="face" aria-live="polite"></div>
+  <div class="lab" id="lab"></div>
+
+  <!-- Aquí aparecerá el BlurText "Gracias por opinar" -->
+  <div id="thanksBlur" aria-live="polite"></div>
+</div></section>
+
+<footer>Ciencias Sociales · Equipo 2 · Fuentes: Britannica, Ferguson, Reid, Freedom House, World Bank · Fotos: Library of Congress y Wikimedia Commons (dominio público)</footer>
+</div>
+
+<script>
+/* ============================================================
+   UTILIDADES
+============================================================ */
+const $  = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const rm = matchMedia('(prefers-reduced-motion:reduce)').matches;
+const cm = n => 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(n) + '?width=900';
+
+/* ============================================================
+   BlurText · portado de React a vanilla JS
+   (equivalente a <BlurText text="..." delay={200}
+    animateBy="words" direction="top" onAnimationComplete={...} />)
+============================================================ */
+function BlurText(opts){
+  const {
+    text = '',
+    delay = 200,
+    animateBy = 'words',           // 'words' | 'letters'
+    direction = 'top',             // 'top' | 'bottom'
+    onAnimationComplete = null,
+    className = '',
+    stepDuration = 0.9,            // duración por paso (s)
+  } = opts || {};
+
+  // Crea el contenedor
+  const root = document.createElement('div');
+  root.className = ('blur-text ' + className).trim();
+  root.setAttribute('data-direction', direction);
+
+  // Divide el texto
+  const tokens = animateBy === 'words'
+    ? text.split(' ').filter(Boolean)
+    : text.split('');
+
+  // Dirección inicial
+  const fromY = direction === 'top' ? -40 : 40;
+
+  // Crea cada elemento
+  tokens.forEach((tok, i) => {
+    const el = document.createElement('span');
+    el.className = animateBy === 'words' ? 'bt-word' : 'bt-char';
+    el.textContent = animateBy === 'words' ? tok : (tok === ' ' ? '\u00A0' : tok);
+
+    // Aplica el estado inicial
+    el.style.opacity = '0';
+    el.style.transform = `translate3d(0, ${fromY}px, 0) scale(.92)`;
+    el.style.filter = 'blur(14px)';
+    el.style.animationDelay = '0s';
+
+    // Al terminar su animación individual
+    el.addEventListener('animationend', () => {
+      el.classList.add('bt-done');
+      // ¿Es el último token?
+      if(i === tokens.length - 1 && typeof onAnimationComplete === 'function'){
+        onAnimationComplete();
+      }
+    }, { once:true });
+
+    root.appendChild(el);
+
+    // Espacio entre palabras (si estamos en modo letra)
+    if(animateBy === 'letters' && tok === ' ') {
+      // ya insertamos un nbsp
+    }
+  });
+
+  // Guarda referencia para re-disparar
+  root.__play = () => {
+    root.querySelectorAll('.bt-word, .bt-char').forEach((el, i) => {
+      el.classList.remove('bt-done');
+      el.style.opacity = '0';
+      el.style.transform = `translate3d(0, ${fromY}px, 0) scale(.92)`;
+      el.style.filter = 'blur(14px)';
+      // Reset animation
+      el.style.animation = 'none';
+      void el.offsetWidth;
+      el.style.animation = '';
+      el.style.animationDelay = (i * delay / 1000).toFixed(3) + 's';
+      el.classList.add('bt-in');
+    });
+  };
+  root.__reset = () => {
+    root.querySelectorAll('.bt-word, .bt-char').forEach(el => {
+      el.classList.remove('bt-in', 'bt-done');
+      el.style.animation = '';
+      el.style.opacity = '0';
+      el.style.transform = `translate3d(0, ${fromY}px, 0) scale(.92)`;
+      el.style.filter = 'blur(14px)';
+    });
+  };
+
+  return root;
+}
+
+/* ============================================================
+   IMÁGENES
+============================================================ */
+const K = {
+  A:[cm('Soldiers demonstration.February 1917.jpg'), cm('Feb 1917.jpg'), cm('Patrol of the February revolution.jpg')],
+  B:[cm('Революционный митинг 1917 (1).jpg'), cm('Bundist demonstration.jpg'), cm('Soldiers demonstration.February 1917.jpg')],
+  C:[cm('CP Petrograd Leaders of February Revolution at Funeral of its Victims.JPG'), cm('1917 Duma guards.jpg'), cm('Feb 1917.jpg')],
+  D:[cm('19170704 Riot on Nevsky prosp Petrograd.jpg'), cm('Patrol of the February revolution.jpg'), cm('Soldiers demonstration.February 1917.jpg')],
+  E:[cm('Patrol of the February revolution.jpg'), cm('Soldiers demonstration.February 1917.jpg'), cm('Feb 1917.jpg')],
+  F:[cm('Feb 1917.jpg'), cm('Soldiers demonstration.February 1917.jpg'), cm('Patrol of the February revolution.jpg')],
+  G:[cm('Defenders NGM-v31-p369-A.jpg'), cm('Feb 1917.jpg'), cm('Soldiers demonstration.February 1917.jpg')],
+  H:[cm('1917 Duma guards.jpg'), cm('CP Petrograd Leaders of February Revolution at Funeral of its Victims.JPG'), cm('Feb 1917.jpg')],
+  I:[cm('Distribution of leaflets in the days of the February Revolution on Tverskaya Street.jpg'), cm('Революционный митинг 1917 (1).jpg'), cm('Soldiers demonstration.February 1917.jpg')],
+  J:[cm('Bundist demonstration.jpg'), cm('Революционный митинг 1917 (1).jpg'), cm('Feb 1917.jpg')],
+  K:[cm('Lenin.WWI.JPG'), cm('Vladimir Lenin.jpg'), cm('Trotsky Lenin Sverdlov.jpg')],
+  L:[cm('Wladiwostok Parade 1918.jpg'), cm('Patrol of the February revolution.jpg'), cm('Feb 1917.jpg')],
+  M:[cm('Trotsky Lenin Sverdlov.jpg'), cm('Lenin.WWI.JPG'), cm('Vladimir Lenin.jpg')],
+  N:[cm('Kerensky LOC 2003653112.jpg'), cm('1917 Duma guards.jpg'), cm('CP Petrograd Leaders of February Revolution at Funeral of its Victims.JPG')],
+  O:[cm('Vladimir Lenin.jpg'), cm('Lenin.WWI.JPG'), cm('Trotsky Lenin Sverdlov.jpg')],
+  P:[cm('Революционный митинг 1917 (1).jpg'), cm('Feb 1917.jpg'), cm('Soldiers demonstration.February 1917.jpg')]
+};
+function nx(el){const q=(el.dataset.s||'').split('|').filter(Boolean);if(!q.length){el.style.opacity='.3';return}el.dataset.s=q.slice(1).join('|');el.src=q[0]}
+function bind(el){const u=K[el.dataset.k];el.referrerPolicy='no-referrer';el.loading='lazy';el.dataset.s=u.slice(1).join('|');el.onerror=()=>nx(el);el.src=u[0]}
+$('#h0').dataset.k='D';
+
+/* ============================================================
+   CAPÍTULOS
+============================================================ */
+const C=[
+['1914','La guerra del zar','Rusia entra en la Primera Guerra Mundial con Francia y el Reino Unido. Tannenberg, la Gran Retirada y las ofensivas fallidas dejan cerca de 1.811.000 muertos, solo por detrás de Alemania.'],
+['Feb 1917','El ejército se niega','Hambre, inflación y una sangría militar sin fin. Los soldados se niegan a reprimir las protestas de Petrogrado y el zar Nicolás II abdica.'],
+['Oct 1917','Paz, Pan y Tierra','Los bolcheviques de Lenin llegan al poder con demandas concretas y aprueban el Decreto sobre la Paz: salida inmediata y sin anexiones.'],
+['Mar 1918','Brest-Litovsk','Ante la ofensiva alemana, Lenin firma un tratado duro: Rusia cede Ucrania, Finlandia, los bálticos y parte de Polonia, cerca de un tercio de su población.'],
+['1918-1920','Intervención aliada','Reino Unido, Francia, EE. UU. y Japón desembarcan tropas. Al final apoyan a los ejércitos blancos y dan a los soviéticos su relato contra el «imperialismo capitalista».'],
+['1922','Nace la URSS','Tras una guerra civil sangrienta, se proclama la Unión Soviética: el primer Estado fundado sobre el marxismo y la propiedad colectiva.']
+];
+$('#chaps').innerHTML = C.map((c,i)=>`<div class="chap glass rv"><div class="art"><img alt="Fotografía de época: ${c[1]}" data-k="${'GABPLF'[i]}"></div><div><p class="yr">${c[0]}</p><h3>${c[1]}</h3><p>${c[2]}</p></div></div>`).join('');
+
+/* ============================================================
+   MURO DE FOTOS
+============================================================ */
+(function(){const T='DGABIEHLCJFKMNOP';for(let c=0;c<5;c++){const d=document.createElement('div');d.className='col';d.style.marginTop=c*40+'px';let h='';for(let r=0;r<16;r++)h+=`<img alt="" data-k="${T[(c*3+r)%16]}">`;d.innerHTML=h;$('#plane').append(d)}})();
+
+/* ============================================================
+   COMPARATIVA URSS / CHINA
+============================================================ */
+const R=['Ideología','Sistema político','Economía','Propiedad','Prensa','Mercado mundial','Resultado'],
+D=[['Marxismo-leninismo ortodoxo','Partido único, sin elecciones competitivas','Planificación centralizada total','Estatal y colectiva casi total','Censura estatal total','Economía cerrada y autosuficiente','Estancamiento y crisis final'],
+['«Socialismo con características chinas»','Partido único, sin elecciones competitivas','Mercado más control estatal estratégico','Mixta: estatal, privada y mixta','Censura y vigilancia digital','Potencia exportadora mundial','Crecimiento sostenido, aunque se desacelera']];
+function cmp(k){$('#cmp').innerHTML=R.map((r,i)=>`<div><span>${r}</span><b style="font-weight:400">${D[k][i]}</b></div>`).join('')}
+cmp(0);
+$('#seg').onclick = e => {
+  const b = e.target.closest('button'); if(!b) return;
+  $$('#seg button').forEach(x=>x.classList.toggle('on',x==b));
+  const c = $('#cmp'); c.classList.add('sw');
+  setTimeout(()=>{ cmp(+b.dataset.k); c.classList.remove('sw'); }, 250);
+};
+
+{const ss=$$('#stroke text');ss.forEach(s=>{s.style.strokeDasharray=2600;s.style.strokeDashoffset=2600;})}
+
+/* ============================================================
+   REVEAL ON SCROLL + contadores + barras
+============================================================ */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if(!e.isIntersecting) return;
+  const t = e.target;
+  t.classList.add('in');
+  io.unobserve(t);
+
+  t.querySelectorAll('[data-n]').forEach(n => {
+    const v = +n.dataset.n, s = n.dataset.s || '', t0 = performance.now();
+    (function f(now){
+      const p = Math.min(1, (now - t0) / 1600);
+      const ee = 1 - Math.pow(1 - p, 3);
+      n.textContent = Math.round(v * ee).toLocaleString('es') + s;
+      if(p < 1) requestAnimationFrame(f);
+    })(t0);
+  });
+  t.querySelectorAll('.bar').forEach(b => b.style.height = b.dataset.h + '%');
+  if(t.querySelector('#stroke')){
+    $$('#stroke text').forEach((s, idx) => {
+      s.animate([{strokeDashoffset:2600},{strokeDashoffset:0}],
+        {duration:2000, delay:idx*400, fill:'forwards', easing:'ease-out'});
+      setTimeout(()=>{ s.style.transition='fill 1s'; s.style.fill='#f5f1ef'; }, 2600 + idx*400);
+    });
+  }
+}), {threshold:.2});
+$$('.rv').forEach(e => io.observe(e));
+
+/* ============================================================
+   HERO · animación de palabras
+============================================================ */
+{const p=$('#lead'), w=p.textContent.split(' ');
+ p.textContent='';
+ w.forEach((s,i)=>{
+   const e=document.createElement('span');
+   e.textContent=s; p.append(e,' ');
+   setTimeout(()=>e.classList.add('on'), 500 + i*160);
+ });}
+
+/* ============================================================
+   PARALLAX
+============================================================ */
+document.querySelectorAll('img[data-k]').forEach(bind);
+const arts = [...document.querySelectorAll('.art img')];
+function sc(){
+  const y = scrollY, h = innerHeight;
+  document.documentElement.style.setProperty('--p', Math.min(1, y/h).toFixed(3));
+  arts.forEach(i=>{
+    const r = i.parentNode.getBoundingClientRect();
+    i.style.setProperty('--py', (-(r.top + r.height/2 - h/2)*.06 - 10) + 'px');
+  });
+}
+addEventListener('scroll', sc, {passive:true}); sc();
+
+/* ============================================================
+   GLASS interactivo
+============================================================ */
+$$('.glass').forEach(g => {
+  g.addEventListener('pointermove', e => {
+    const r = g.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width;
+    const y = (e.clientY - r.top) / r.height;
+    g.style.setProperty('--mx', x*100+'%');
+    g.style.setProperty('--my', y*100+'%');
+    if(!rm && r.height < 420 && matchMedia('(hover:hover)').matches){
+      g.style.transform = `perspective(900px) rotateX(${(.5-y)*5}deg) rotateY(${(x-.5)*7}deg)`;
+    }
+  });
+  g.addEventListener('pointerleave', () => { g.style.transform = ''; });
+});
+
+/* ============================================================
+   FONDO: Frosted Veil · WebGL
+============================================================ */
+(function(){
+  const canvas = document.getElementById('slats');
+  if(!canvas) return;
+
+  const gl = canvas.getContext('webgl', { antialias:false, alpha:false, depth:false })
+          || canvas.getContext('experimental-webgl');
+  if(!gl){ console.warn('FrostedVeil: WebGL unavailable'); return; }
+
+  const MAX_DPR = 2;
+
+  const VERT_SRC = `
+attribute vec2 a_pos;
+void main() { gl_Position = vec4(a_pos, 0.0, 1.0); }
+`;
+
+  const FRAG_SRC = `
+#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision mediump float;
+#endif
+
+uniform vec2  uRes;
+uniform float uTime;
+uniform vec2  uMouse;
+uniform float uHover;
+uniform vec3  uBg;
+uniform vec3  uBase;
+uniform vec3  uAccent;
+uniform vec3  uHigh;
+uniform float uSlats;
+uniform float uFrost;
+uniform float uRefract;
+uniform float uEdge;
+uniform float uGrain;
+
+float sat(float x) { return clamp(x, 0.0, 1.0); }
+
+float h21(vec2 p) {
+    p = fract(p * vec2(123.34, 456.21));
+    p += dot(p, p + 34.56);
+    return fract(p.x * p.y);
+}
+
+float vnoise(vec2 p) {
+    vec2 i = floor(p), f = fract(p);
+    f = f * f * (3.0 - 2.0 * f);
+    float a = h21(i), b = h21(i + vec2(1.0, 0.0));
+    float c = h21(i + vec2(0.0, 1.0)), d = h21(i + vec2(1.0, 1.0));
+    return mix(mix(a, b, f.x), mix(c, d, f.x), f.y);
+}
+
+float fbm5(vec2 p) {
+    float s = 0.0, a = 0.5;
+    for (int i = 0; i < 5; i++) { s += a * vnoise(p); p = p * 2.03 + vec2(1.7, 9.2); a *= 0.5; }
+    return s;
+}
+
+float fbm3(vec2 p) {
+    float s = 0.0, a = 0.5;
+    for (int i = 0; i < 3; i++) { s += a * vnoise(p); p = p * 2.07 + vec2(4.1, 2.3); a *= 0.5; }
+    return s;
+}
+
+vec3 behind(vec2 uv, float t) {
+    float a = fbm5(vec2(uv.x * 3.2, t * 0.05));
+    float b = fbm3(vec2(uv.x * 9.0 + 4.1, t * 0.07));
+    float prof = exp(-pow((uv.y - 0.52) / 0.42, 2.0));
+    float amber = sat((b - 0.62) * 4.0) * sat(a * 1.5 - 0.30);
+    vec3 c = mix(uBase, uAccent, sat(a * 1.5 - 0.20));
+    c = mix(c, uHigh, amber * 0.85);
+    return c * prof * (0.35 + 1.25 * pow(sat(a * 1.2 + b * 0.5 - 0.32), 1.4));
+}
+
+void main() {
+    vec2 uv = gl_FragCoord.xy / uRes;
+    float t = uTime;
+
+    float warp = 0.05 * fbm3(vec2(uv.x * 2.2, 7.0));
+    float sx = (uv.x + warp) * uSlats;
+    float si = floor(sx), sf = fract(sx);
+    float rnd = h21(vec2(si * 0.317, 1.0));
+    float rnd2 = h21(vec2(si * 0.713, 5.0));
+
+    float shift = (rnd - 0.5) * uRefract * 0.10;
+    vec3 lit = behind(vec2(uv.x + shift, uv.y), t);
+
+    vec3 soft = vec3(0.0);
+    for (int k = 0; k < 5; k++) {
+        float o = (float(k) - 2.0) * uFrost * 0.020;
+        soft += behind(vec2(uv.x + shift + o, uv.y + o * 0.4), t);
+    }
+    soft *= 0.2;
+
+    vec2 wd = uv - uMouse;
+    wd.x *= uRes.x / uRes.y;
+    float wipe = uHover * exp(-dot(wd, wd) * 8.0);
+
+    vec3 col = uBg + mix(lit, soft, clamp(0.80 - wipe, 0.0, 0.80)) * (0.55 + 0.85 * rnd2);
+    col *= 1.0 + wipe * 0.22;
+
+    float edge = min(sf, 1.0 - sf);
+    col += mix(uAccent, vec3(1.0), 0.35) * exp(-edge / 0.030) * 0.30 * uEdge;
+    col *= 0.86 + 0.28 * smoothstep(0.0, 0.20, edge);
+    col *= 1.0 - 0.40 * pow(sat(abs(uv.y - 0.5) * 2.0), 2.4);
+    col += (h21(gl_FragCoord.xy + fract(uTime) * 37.0) - 0.5) * uGrain;
+
+    gl_FragColor = vec4(max(col, 0.0), 1.0);
+}
+`;
+
+  function parseColor(input, fb){
+    if(!input) return fb;
+    const str = String(input).trim();
+    if(str.charAt(0) === '#'){
+      let hex = str.slice(1);
+      if(hex.length === 3 || hex.length === 4){
+        hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+      }
+      if(hex.length >= 6){
+        const r = parseInt(hex.slice(0,2),16);
+        const g = parseInt(hex.slice(2,4),16);
+        const b = parseInt(hex.slice(4,6),16);
+        if(!isNaN(r) && !isNaN(g) && !isNaN(b)) return [r/255, g/255, b/255];
+      }
+      return fb;
+    }
+    const m = str.match(/[\d.]+/g);
+    if(m && m.length >= 3){
+      return [
+        Math.min(255, parseFloat(m[0])) / 255,
+        Math.min(255, parseFloat(m[1])) / 255,
+        Math.min(255, parseFloat(m[2])) / 255
+      ];
+    }
+    return fb;
+  }
+  const num = (v, fb) => (typeof v === 'number' && isFinite(v)) ? v : fb;
+  const clampN = (v, lo, hi) => v < lo ? lo : v > hi ? hi : v;
+
+  function compile(type, src){
+    const sh = gl.createShader(type);
+    if(!sh) return null;
+    gl.shaderSource(sh, src);
+    gl.compileShader(sh);
+    if(!gl.getShaderParameter(sh, gl.COMPILE_STATUS)){
+      console.error('FrostedVeil shader:', gl.getShaderInfoLog(sh));
+      gl.deleteShader(sh);
+      return null;
+    }
+    return sh;
+  }
+
+  const CFG = {
+    background:   '#000000',
+    baseColor:    '#000D16',
+    accentColor:  '#FF0F00',
+    highlight:    '#FFFFFF',
+    speed:        100,
+    hover:        200,
+    grain:        100,
+    vignette:     100,
+    veil: { slats:60, frost:300, refraction:300, edge:300 }
+  };
+
+  const v = {
+    bg:     CFG.background,
+    base:   CFG.baseColor,
+    accent: CFG.accentColor,
+    high:   CFG.highlight,
+    speed:     clampN(num(CFG.speed,50), 0, 100) / 50,
+    hover:     clampN(num(CFG.hover,100), 0, 200) / 100,
+    slats:     clampN(num(CFG.veil.slats,16), 3, 60),
+    frost:     clampN(num(CFG.veil.frost,100), 0, 300) / 100,
+    refraction:clampN(num(CFG.veil.refraction,100), 0, 300) / 100,
+    edge:      clampN(num(CFG.veil.edge,100), 0, 300) / 100,
+    grain:    (clampN(num(CFG.grain,20), 0, 100) / 100) * 0.09
+  };
+
+  const vs = compile(gl.VERTEX_SHADER, VERT_SRC);
+  const fs = compile(gl.FRAGMENT_SHADER, FRAG_SRC);
+  if(!vs || !fs) return;
+  const prog = gl.createProgram();
+  if(!prog) return;
+  gl.attachShader(prog, vs);
+  gl.attachShader(prog, fs);
+  gl.linkProgram(prog);
+  if(!gl.getProgramParameter(prog, gl.LINK_STATUS)){
+    console.error('FrostedVeil link:', gl.getProgramInfoLog(prog));
+    return;
+  }
+  gl.useProgram(prog);
+
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 3,-1, -1,3]), gl.STATIC_DRAW);
+  const posLoc = gl.getAttribLocation(prog, 'a_pos');
+  gl.enableVertexAttribArray(posLoc);
+  gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
+
+  const locs = {};
+  const u = name => {
+    if(!(name in locs)) locs[name] = gl.getUniformLocation(prog, name);
+    return locs[name];
+  };
+
+  const ptr = { x:0.5, y:0.5, tx:0.5, ty:0.5, on:0, onTarget:0 };
+
+  addEventListener('pointermove', e => {
+    ptr.tx = clampN(e.clientX / innerWidth, 0, 1);
+    ptr.ty = clampN(e.clientY / innerHeight, 0, 1);
+    ptr.onTarget = 1;
+  }, {passive:true});
+  addEventListener('pointerdown', e => {
+    ptr.tx = clampN(e.clientX / innerWidth, 0, 1);
+    ptr.ty = clampN(e.clientY / innerHeight, 0, 1);
+    ptr.onTarget = 1;
+  }, {passive:true});
+  const resetPtr = () => { ptr.onTarget = 0; };
+  addEventListener('pointerleave', resetPtr);
+  addEventListener('blur', resetPtr);
+  document.addEventListener('pointerleave', resetPtr);
+
+  let raf = 0, last = performance.now(), clock = 0;
+
+  function render(now){
+    const dt = Math.min(0.05, (now - last) / 1000);
+    last = now;
+
+    clock = (clock + dt * v.speed) % 3600;
+
+    const k = 1 - Math.exp(-6 * dt);
+    ptr.on += (ptr.onTarget - ptr.on) * k;
+    ptr.x += ((ptr.onTarget > 0 ? ptr.tx : 0.5) - ptr.x) * k;
+    ptr.y += ((ptr.onTarget > 0 ? ptr.ty : 0.5) - ptr.y) * k;
+
+    const dpr = Math.min(window.devicePixelRatio || 1, MAX_DPR);
+    const cw = innerWidth;
+    const ch = innerHeight;
+    const bw = Math.max(1, Math.round(cw * dpr));
+    const bh = Math.max(1, Math.round(ch * dpr));
+    if(canvas.width !== bw || canvas.height !== bh){
+      canvas.width = bw;
+      canvas.height = bh;
+    }
+    gl.viewport(0, 0, bw, bh);
+
+    gl.uniform2f(u('uRes'), bw, bh);
+    gl.uniform1f(u('uTime'), clock);
+    gl.uniform2f(u('uMouse'), ptr.x, 1 - ptr.y);
+    gl.uniform1f(u('uHover'), Math.min(1, ptr.on) * v.hover);
+
+    const cg  = parseColor(v.bg,    [0.031, 0.016, 0.055]);
+    const cb  = parseColor(v.base,  [0.478, 0.173, 0.878]);
+    const ca  = parseColor(v.accent,[0.886, 0.294, 0.784]);
+    const ch2 = parseColor(v.high,  [1.0, 0.62, 0.239]);
+
+    gl.uniform3f(u('uBg'),     cg[0],  cg[1],  cg[2]);
+    gl.uniform3f(u('uBase'),   cb[0],  cb[1],  cb[2]);
+    gl.uniform3f(u('uAccent'), ca[0],  ca[1],  ca[2]);
+    gl.uniform3f(u('uHigh'),   ch2[0], ch2[1], ch2[2]);
+    gl.uniform1f(u('uSlats'),  v.slats);
+    gl.uniform1f(u('uFrost'),  v.frost);
+    gl.uniform1f(u('uRefract'),v.refraction);
+    gl.uniform1f(u('uEdge'),   v.edge);
+    gl.uniform1f(u('uGrain'),  v.grain);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+    raf = requestAnimationFrame(render);
+  }
+  raf = requestAnimationFrame(render);
+})();
+/* ============== FIN Frosted Veil ============== */
+
+/* ============================================================
+   FLIP CARD · Tarjeta 3D interactiva
+============================================================ */
+(function(){
+  const scene = document.getElementById('flipScene');
+  const tilt  = document.getElementById('flipTilt');
+  const card  = document.getElementById('flipCard');
+  const img   = document.getElementById('flipFrontImg');
+  if(!scene || !card) return;
+
+  if(img){
+    img.referrerPolicy = 'no-referrer';
+    img.src = cm('Vladimir Lenin.jpg');
+    img.onerror = () => { img.src = cm('Lenin.WWI.JPG'); };
+  }
+
+  const OPT = {
+    axis: 'y',
+    tiltMax: 12,
+    glareOpacity: 0.22,
+    hoverScale: 1.03,
+    dragDistance: 60,
+    dragTime: 700,
+    perspective: 1100
+  };
+
+  let flipped = false;
+  let justDragged = false;
+  let down = null;
+  let dragged = 0;
+
+  scene.style.perspective = OPT.perspective + 'px';
+
+  function setFlipped(v){
+    if(flipped === v) return;
+    flipped = v;
+    const deg = OPT.axis === 'x' ? 'rotateX' : 'rotateY';
+    card.style.transform = flipped ? `${deg}(180deg)` : '';
+    card.classList.toggle('flipped', flipped);
+    scene.setAttribute('aria-pressed', flipped ? 'true' : 'false');
+    scene.setAttribute('aria-label', flipped ? 'Tarjeta girada. Toca para volver.' : 'Tarjeta: toca para girar');
+  }
+
+  card.addEventListener('click', () => {
+    if(justDragged) return;
+    setFlipped(!flipped);
+  });
+  scene.addEventListener('keydown', e => {
+    if(e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar'){
+      e.preventDefault();
+      setFlipped(!flipped);
+    }
+  });
+
+  const fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  function applyGlare(gx, gy, op){
+    card.querySelectorAll('.flip-glare').forEach(g => {
+      g.style.setProperty('--gx', gx + '%');
+      g.style.setProperty('--gy', gy + '%');
+      g.style.setProperty('--go', op);
+    });
+  }
+  function clearTilt(){
+    tilt.style.transform = '';
+    applyGlare(50, 50, 0);
+  }
+
+  if(fine && !rm){
+    scene.addEventListener('pointermove', e => {
+      const r = scene.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width;
+      const y = (e.clientY - r.top) / r.height;
+      const ry = (x - 0.5) * OPT.tiltMax * 2;
+      const rx = (0.5 - y) * OPT.tiltMax * 2;
+      tilt.style.transform = `rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) scale(${OPT.hoverScale})`;
+      applyGlare((x * 100).toFixed(1), (y * 100).toFixed(1), OPT.glareOpacity);
+      if(down){
+        dragged = Math.max(dragged, Math.abs(e.clientX - down.x) + Math.abs(e.clientY - down.y));
+      }
+    });
+    scene.addEventListener('pointerleave', clearTilt);
+  }
+
+  scene.addEventListener('pointerdown', e => {
+    down = { x: e.clientX, y: e.clientY, t: performance.now(), id: e.pointerId };
+    dragged = 0;
+    try { scene.setPointerCapture(e.pointerId); } catch(_) {}
+  });
+
+  scene.addEventListener('pointerup', e => {
+    if(!down) return;
+    const dt = performance.now() - down.t;
+    const dx = e.clientX - down.x;
+    const dy = e.clientY - down.y;
+    const dist = Math.hypot(dx, dy);
+    if(dist > OPT.dragDistance && dt < OPT.dragTime){
+      setFlipped(!flipped);
+      justDragged = true;
+      setTimeout(() => { justDragged = false; }, 60);
+    }
+    down = null;
+    try { scene.releasePointerCapture(e.pointerId); } catch(_) {}
+  });
+
+  scene.addEventListener('pointercancel', () => { down = null; });
+
+  window.__flipCard = { setFlipped, isFlipped: () => flipped };
+})();
+
+function flipPulse(){
+  const s = document.getElementById('flipScene');
+  if(!s || rm) return;
+  s.classList.remove('pulse');
+  void s.offsetWidth;
+  s.classList.add('pulse');
+  setTimeout(() => s.classList.remove('pulse'), 980);
+}
+
+/* ============================================================
+   BlurText · instancia para "Gracias por opinar"
+============================================================ */
+const thanksHost = document.getElementById('thanksBlur');
+let thanksBlur = null;
+
+function showThanks(){
+  if(!thanksHost) return;
+  // Si ya existe, la reiniciamos
+  if(thanksBlur && thanksHost.contains(thanksBlur)){
+    thanksBlur.__play();
+    return;
+  }
+  thanksBlur = BlurText({
+    text: "Gracias por opinar",
+    delay: 200,
+    animateBy: "words",
+    direction: "top",
+    className: "",
+    onAnimationComplete: () => {
+      console.log('Animation completed!');
+    }
+  });
+  thanksHost.innerHTML = '';
+  thanksHost.appendChild(thanksBlur);
+  // pequeña pausa antes de disparar para que se aplique el estilo inicial
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => thanksBlur.__play());
+  });
+}
+
+/* ============================================================
+   CALIFICACIÓN CON ESTRELLAS + BlurText al terminar
+============================================================ */
+{const L=['Pobre','Regular','Bien','Genial','Superb'],F=['😭','😕','🙂','😃','😎'],bx=$('#stars');let v=0;
+for(let i=1;i<=5;i++){
+  const b=document.createElement('button');
+  b.className='star';b.setAttribute('role','radio');b.setAttribute('aria-label',i+' de 5: '+L[i-1]);
+  b.innerHTML='<svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><span class="tip">'+L[i-1]+'</span>';
+  b.onclick=()=>{
+    v = v === i ? 0 : i;
+    [...bx.children].forEach((s,k)=>s.classList.toggle('on',k<v));
+    $('#face').textContent = v ? F[v-1] : '';
+    $('#lab').textContent  = v ? L[v-1]+' · '+v+' de 5' : '';
+    const f = $('#face');
+    f.classList.add('pop');
+    setTimeout(()=>f.classList.remove('pop'),260);
+    if(v) flipPulse();
+
+    // Al calificar (cualquier valor) → mostramos "Gracias por opinar" con BlurText
+    if(v) {
+      // pequeño retraso para que se vea la reacción del emoji primero
+      setTimeout(showThanks, 220);
+    } else {
+      // si se quita la calificación, limpiamos
+      if(thanksHost) thanksHost.innerHTML = '';
+      thanksBlur = null;
+    }
+  };
+  bx.append(b);
+}}
+
+/* ============================================================
+   Tilt dinámico en las stat cards
+============================================================ */
+$$('.stat').forEach(s => {
+  s.addEventListener('pointermove', e => {
+    if(rm) return;
+    const r = s.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - .5;
+    const y = (e.clientY - r.top) / r.height - .5;
+    s.style.transform = `perspective(600px) rotateX(${(-y*8).toFixed(2)}deg) rotateY(${(x*8).toFixed(2)}deg) translateZ(0)`;
+  });
+  s.addEventListener('pointerleave', () => s.style.transform = '');
+});
+</script></body></html>
