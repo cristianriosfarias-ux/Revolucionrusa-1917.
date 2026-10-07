@@ -365,12 +365,60 @@ footer{text-align:center;color:var(--mute);font-size:.8rem;padding:40px 0}
   .chap{grid-template-columns:1fr}
   .chap:nth-child(even) .art{order:0}
   .bento>*{grid-column:span 6}
-  nav{gap:16px}
-  nav a:nth-of-type(n+4){display:none}
-  .cmp div{grid-template-columns:1fr}
-  .star{width:44px;height:44px}
-  .wall{height:440px}
-  section{padding:70px 0 24px}
+  nav{
+    height:54px;
+    justify-content:flex-start;
+    gap:18px;
+    padding:0 14px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    overscroll-behavior-x:contain;
+    scrollbar-width:none;
+  }
+  nav::-webkit-scrollbar{display:none}
+  nav b{flex:0 0 auto;margin-right:2px}
+  nav a{display:flex;align-items:center;flex:0 0 auto;min-height:44px}
+  nav a:nth-of-type(n+4){display:flex}
+  .hero{min-height:100svh;padding:84px 16px 30px}
+  .grad{max-width:100%;font-size:clamp(2.3rem,11.5vw,4.2rem);line-height:1.05;overflow-wrap:anywhere}
+  .hero .lead{font-size:1rem;max-width:34rem;margin:18px auto 24px}
+  .frame{border-radius:20px}
+  .w{padding:0 16px}
+  .glass{padding:22px;border-radius:22px}
+  .frame.glass{padding:0}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .stat{padding:16px 10px}
+  .stat .n{font-size:clamp(1.5rem,7.5vw,2.15rem)}
+  .stat small{font-size:.82rem;line-height:1.35}
+  .chap{gap:16px;margin-bottom:18px}
+  .art{aspect-ratio:16/10;border-radius:18px}
+  .art img{height:100%;transform:none}
+  .bento{gap:12px}
+  .bento>*{min-width:0}
+  .bars{gap:10px;height:132px}
+  .cmp div{grid-template-columns:1fr;gap:3px;padding:11px 0}
+  .seg{display:flex;width:100%;max-width:420px;gap:5px}
+  .seg button{flex:1;min-width:0;padding:10px 8px;font-size:.82rem}
+  .flip-scene{width:min(300px,82vw);height:min(390px,106vw)}
+  .flip-back{padding:22px 18px}
+  .star{width:46px;height:46px}
+  .wall{height:380px}
+  .plane{width:880px;margin-left:-440px;gap:12px}
+  .col img{width:160px;height:100px;border-radius:12px}
+  .warp{height:120px}
+  .stroke{margin:10px 0}
+  footer{padding:30px 16px}
+  section{padding:64px 0 24px}
+}
+@media(max-width:380px){
+  nav{gap:10px;padding-inline:8px;font-size:.74rem}
+  .hero{padding-inline:12px}
+  .grad{font-size:clamp(2rem,10.5vw,2.45rem)}
+  .w{padding-inline:12px}
+  .glass{padding:18px}
+  .frame.glass{padding:0}
+  .stat .n{font-size:1.45rem}
+  .flip-back{padding:18px 15px}
 }
 @media(prefers-reduced-motion:reduce){
   .col,.grad,.glass::after,.flip-scene.pulse{animation:none!important}
@@ -705,7 +753,7 @@ $$('.glass').forEach(g => {
           || canvas.getContext('experimental-webgl');
   if(!gl){ console.warn('FrostedVeil: WebGL unavailable'); return; }
 
-  const MAX_DPR = 2;
+  const MAX_DPR = matchMedia('(max-width:760px)').matches ? 1.25 : 2;
 
   const VERT_SRC = `
 attribute vec2 a_pos;
